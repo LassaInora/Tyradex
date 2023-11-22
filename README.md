@@ -68,7 +68,7 @@ tous_les_types = get_all_types()
 - Consultez la [documentation de l'API](https://tyradex.tech/docs) pour plus de détails sur les points d'extrémité disponibles et la structure des données.
 
 ## Contributeurs
-- API crée par:
+- API créée par:
   - [Yarkis](https://github.com/Yarkis01)
   - [Ashzuu](https://github.com/Ashzuu)
 - Adaptation pour python par:
