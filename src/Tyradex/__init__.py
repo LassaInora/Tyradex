@@ -12,7 +12,8 @@ def _call(point):
         def __init__(self, path):
             # Initialize API_Call with a specified path
             self.path = pathlib.Path(
-                str(pathlib.Path(__file__).parent.parent.absolute()).replace('\\', '/') + '/.cache/' + path + ".json")
+                os.getenv('USERPROFILE').replace('\\', '/') + '/.cache/Tyradex/call/' + path + ".json"
+            )
             self.url = f"https://tyradex.tech/api/v1/{path}"
 
             # Create necessary directories for cache if they don't exist
