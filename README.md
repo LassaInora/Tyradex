@@ -1,78 +1,83 @@
-# Tyradex pour Python
-[![Logo Pokémon](https://tyradex.tech/assets/logo.png)](https://tyradex.tech/)
+# <a href="https://tyradex.tech/"><img src="https://tyradex.tech/assets/logo.png" alt="Logo Pokémon"/></a> Tyradex for Python
+[![PyPI version](https://badge.fury.io/py/Tyradex.svg)](https://badge.fury.io/py/Tyradex)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/Tyradex.svg)](https://pypi.org/project/Tyradex)
+[![Downloads](https://static.pepy.tech/badge/Tyradex/month)](https://pepy.tech/project/Tyradex)
+[![Contributors](https://img.shields.io/github/contributors/LassaInora/Tyradex.svg)](https://github.com/LassaInora/Tyradex/graphs/contributors)
 
-## Aperçu
-Ce script Python interagit avec l'API Pokémon pour récupérer des informations détaillées sur les Pokémon et les types de Pokémon. Il est conçu pour fournir un accès facile à des détails tels que l'ID du Pokédex, la génération, la catégorie, les capacités, les statistiques, etc., pour des Pokémon individuels ou des types. Le script est organisé en classes représentant différents aspects des données Pokémon et inclut des fonctions pour obtenir des listes de tous les Pokémon et types.
+-> 🇫🇷 : [README_FRENCH.md](https://github.com/LassaInora/Tyradex/blob/main/README_FRENCH.md)
 
-## Fonctionnalités
-- ### Classe Pokemon :
+## Overview
+This Python script interacts with the [Tyradex API](https://tyradex.tech/) to retrieve detailed information about Pokémon and Pokémon types. It is designed to provide easy access to details such as Pokédex ID, generation, category, statistics, etc., for individual Pokémon or types. The script is organized into classes representing different aspects of Pokémon data and includes functions to obtain lists of all Pokémon and types.
 
-  - Récupérez des informations détaillées sur un Pokémon spécifique.
-  - Accédez à des propriétés telles que l'ID du Pokédex, la génération, la catégorie, les capacités, les statistiques, etc.
+## Features
+- ### Pokemon Class :
+  - Retrieve detailed information about a specific Pokémon.
+  - Access properties such as Pokédex ID, generation, category, statistics, etc.
 
-- ### Classe Type :
+- ### Type Class :
 
-  - Obtenez des informations sur un type de Pokémon spécifique.
-  - Accédez à des propriétés telles que l'ID du type, les résistances et une liste de Pokémon associés à ce type.
+  - Get information about a specific Pokémon type.
+  - Access properties such as type ID, resistances, and a list of Pokémon associated with that type.
 
-- ### Classe Generations :
+- ### Generations Class :
 
-  - Accédez aux données Pokémon regroupées par différentes générations.
+  - Access Pokémon data grouped by different generations.
 
-- ### Classes de support :
+- ### Support Classes :
 
-  - Diverses classes de support pour gérer les noms, les talents, les sprites, les statistiques, les résistances, les évolutions, le sexe et les formes.
+  - Various support classes to handle names, abilities, sprites, statistics, resistances, evolutions, gender, and forms.
 
-- ### Fonctions :
+- ### Functions :
 
-  - `get_all_pokemons` : Récupérez une liste de tous les Pokémon.
-  - `get_all_types` : Récupérez une liste de tous les types de Pokémon.
+  - `get_all_pokemons` : Retrieve a list of all Pokémon.
+  - `get_all_types` : Retrieve a list of all Pokémon types.
 
-## Comment utiliser
+## How to Use
 1) ### Installation :
 
-  - Assurez-vous d'avoir Python installé sur votre système.
-  - Installez les dépendances requises en utilisant pip install -r requirements.txt.
+  - Make sure you have Python installed on your system.
+  - Install the library with `pip install --upgrade Tyradex`.
 
-2) ### Utilisation :
+2) ### Usage :
 
-  - Importez le script dans votre projet Python ou exécutez-le en tant que script autonome.
-  - Instanciez les classes pertinentes pour interagir avec les Pokémon ou les types.
-  - Explorez les fonctions fournies pour obtenir des listes de Pokémon et de types.
+  - Import the script into your Python project or run it as a standalone script.
+  - Instantiate relevant classes to interact with Pokémon or types.
+  - Explore the provided functions to get lists of Pokémon and types.
 
 ```python
-# Exemple d'utilisation
+# Example Usage
 from Tyradex import Pokemon, Type, Generations, get_all_pokemons, get_all_types
 
-# Récupérez des informations sur un Pokémon spécifique
-dracaufeu = Pokemon('dracaufeu')
-print(dracaufeu.name)
+# Retrieve information about a specific Pokémon
+charizard = Pokemon('charizard')
+print(charizard.name)
 
-# Récupérez des informations sur un type de Pokémon spécifique
-type_feu = Type('feu')
-print(type_feu.name)
+# Retrieve information about a specific Pokémon type
+fire_type = Type('fire')
+print(fire_type.name)
 
-# Récupérez l'ensemble des pokémons d'une génération
+# Retrieve all Pokémon of a specific generation
 gen_6 = Generations.Gen(6)
 print(gen_6[42])
 
-# Récupérez une liste de tous les Pokémon et types
-tous_les_pokemons = get_all_pokemons()
-tous_les_types = get_all_types()
+# Retrieve a list of all Pokémon and types
+all_pokemons = get_all_pokemons()
+all_types = get_all_types()
 ```
-## Dépendances
-- `requests` : Une bibliothèque HTTP populaire pour effectuer des requêtes API.
+## Dependencies
+- `requests` : Requests is an HTTP library, written in Python, for human beings.
+- `unidecode` : Transliterate Unicode text into plain 7-bit ASCII.
 
-## Référence API
-- Le script interagit avec l'API Pokémon hébergée sur https://tyradex.tech/api/v1/.
-- Consultez la [documentation de l'API](https://tyradex.tech/docs) pour plus de détails sur les points d'extrémité disponibles et la structure des données.
+## API Reference
+- The script interacts with the Pokémon API hosted at https://tyradex.tech/api/v1/.
+- Refer to the [API documentation](https://tyradex.tech/docs) for more details on available endpoints and data structure.
 
-## Contributeurs
-- API créée par:
+## Contributors
+- API created by:
   - [Yarkis](https://github.com/Yarkis01)
   - [Ashzuu](https://github.com/Ashzuu)
-- Adaptation pour python par:
+- Python adaptation by:
   - [LassaInora](https://github.com/LassaInora)
 
-## Licence
-Ce projet est sous licence [MIT License](https://github.com/Yarkis01/PokeAPI/blob/main/LICENSE).
+## License
+This project is under the [MIT License](https://github.com/Yarkis01/PokeAPI/blob/main/LICENSE).
