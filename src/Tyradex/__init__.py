@@ -79,7 +79,7 @@ class Pokemon:
         return str(self.name)
 
     def __repr__(self):
-        return self.pokedex_id
+        return f"<{self.pokedex_id:04}:{self.name}>"
 
     @property
     def pokedex_id(self) -> int:
@@ -552,14 +552,14 @@ class Evolutions:
         """
         if __data is not None:
             # If evolution data is provided, create lists for pre-evolutions, next-evolutions, and mega-evolutions
-            self.pre: list = [Evolution(data) for data in __data['pre']] if 'pre' in __data else []  # List of pre-evolutions
-            self.next: list = [Evolution(data) for data in __data['next']] if 'next' in __data else []  # List of next-evolutions
-            self.mega: list = [Mega(data) for data in __data['mega']] if 'mega' in __data else []  # List of mega-evolutions
+            self.pre: list[Evolution] = [Evolution(data) for data in __data['pre']] if 'pre' in __data and __data['pre'] is not None else []  # List of pre-evolutions
+            self.next: list[Evolution] = [Evolution(data) for data in __data['next']] if 'next' in __data and __data['next'] is not None else []  # List of next-evolutions
+            self.mega: list[Evolution] = [Mega(data) for data in __data['mega']] if 'mega' in __data and __data['mega'] is not None else []  # List of mega-evolutions
         else:
             # If no evolution data is provided, set all lists to empty
-            self.pre: list = []  # List of pre-evolutions
-            self.next: list = []  # List of next-evolutions
-            self.mega: list = []  # List of mega-evolutions
+            self.pre: list[Evolution] = []  # List of pre-evolutions
+            self.next: list[Evolution] = []  # List of next-evolutions
+            self.mega: list[Evolution] = []  # List of mega-evolutions
 
     def __str__(self):
         """Return a string representation of the Evolutions object.
