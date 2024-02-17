@@ -12,7 +12,7 @@
 
 ___
 
-[![Click for README - English](https://img.shields.io/badge/Click_for_README-English-red)](https://github.com/LassaInora/Tyradex/blob/main/README.md)
+[![Click for README - English](https://img.shields.io/badge/Click_for_README-English-red)](README.md)
 
 </div>
 
