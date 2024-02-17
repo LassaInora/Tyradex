@@ -1,10 +1,20 @@
 # <a href="https://tyradex.tech/"><img src="https://tyradex.tech/assets/logo.png" alt="Logo Pokémon"/></a> Tyradex pour Python
+
+<div align="center">
+
+[![LassaInora - Tyradex](https://img.shields.io/static/v1?label=LassaInora&message=Tyradex&color=yellow&logo=github)](https://github.com/LassaInora/Tyradex "Go to GitHub repo")
+[![GitHub tag](https://img.shields.io/github/tag/LassaInora/Tyradex?include_prereleases=&sort=semver&color=orange)](https://github.com/LassaInora/Tyradex/releases/)
+[![stars - Tyradex](https://img.shields.io/github/stars/LassaInora/Tyradex?style=social)](https://github.com/LassaInora/Tyradex)
+[![forks - Tyradex](https://img.shields.io/github/forks/LassaInora/Tyradex?style=social)](https://github.com/LassaInora/Tyradex)
+
 [![PyPI version](https://badge.fury.io/py/Tyradex.svg)](https://badge.fury.io/py/Tyradex)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/Tyradex.svg)](https://pypi.org/project/Tyradex)
-[![Downloads](https://static.pepy.tech/badge/Tyradex/month)](https://pepy.tech/project/Tyradex)
-[![Contributors](https://img.shields.io/github/contributors/LassaInora/Tyradex.svg)](https://github.com/LassaInora/Tyradex/graphs/contributors)
 
--> 🇺🇸 : [README.md](https://github.com/LassaInora/Tyradex/blob/main/README.md)
+___
+
+[![Click for README - English](https://img.shields.io/badge/Click_for_README-English-red)](https://github.com/LassaInora/Tyradex/blob/main/README.md)
+
+</div>
 
 ## Aperçu
 Ce script Python interagit avec l'[API Tyradex](https://tyradex.vercel.app/) pour récupérer des informations détaillées sur les Pokémon et les types de Pokémon. Il est conçu pour fournir un accès facile à des détails tels que l'ID du Pokédex, la génération, la catégorie, les statistiques, etc., pour des Pokémon individuels ou des types. Le script est organisé en classes représentant différents aspects des données Pokémon et inclut des fonctions pour obtenir des listes de tous les Pokémon et types.
@@ -74,10 +84,10 @@ tous_les_types = get_all_types()
 - Consultez la [documentation de l'API](https://tyradex.tech/docs) pour plus de détails sur les points d'extrémité disponibles et la structure des données.
 
 ## Contributeurs
-- API créée par:
+- API créée par :
   - [Yarkis](https://github.com/Yarkis01)
   - [Ashzuu](https://github.com/Ashzuu)
-- Adaptation pour python par:
+- Adaptation pour python par :
   - [LassaInora](https://github.com/LassaInora)
 
 ## Licence
