@@ -7,7 +7,7 @@ import sys
 import requests
 from PIL import Image
 
-from src.Tyradex.errors import DataNotFoundError, ServerError
+from Tyradex.errors import DataNotFoundError, ServerError
 
 BASE_API = "https://tyradex.tech/api/v1/"
 

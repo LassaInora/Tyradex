@@ -3,7 +3,7 @@
 import json
 import sys
 
-from src.Tyradex import call
+from Tyradex import call
 
 
 if __name__ == '__main__':
