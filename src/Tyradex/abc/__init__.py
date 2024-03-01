@@ -1,6 +1,6 @@
 from PIL import Image
 
-from src.Tyradex.maker import call_image, special_call_image
+from Tyradex.maker import call_image, special_call_image
 
 
 class Name:

@@ -4,9 +4,9 @@ import time
 
 from PIL import Image
 
-from src.Tyradex import abc
-from src.Tyradex.errors import *
-from src.Tyradex.maker import call, call_image, concat
+from Tyradex import abc
+from Tyradex.errors import *
+from Tyradex.maker import call, call_image, concat
 
 
 class Pokemon:
