@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Tyradex"
-version = "0.2.0"
+version = "0.2.1"
 authors = [
     {name = "LassaInora", email = "lassa.inora@gmail.com"},
     {name = "Yarkis01"},
