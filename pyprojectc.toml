@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Tyradex"
-version = "0.1.5"
+version = "0.2.0"
 authors = [
     {name = "LassaInora", email = "lassa.inora@gmail.com"},
     {name = "Yarkis01"},
     {name = "Ashzuu"},
 ]
-description = "Une simple API Pokémon en français."
+description = "Tyradex for Python: Unleash the power of Pokémon data with a comprehensive Python script, providing easy access to detailed information on Pokémon and types through the Tyradex API."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -20,7 +20,7 @@ classifiers = [
 ]
 dependencies = [
   'requests',
-  'unidecode',
+  'Pillow',
 ]
 
 [project.urls]
