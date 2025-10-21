@@ -16,14 +16,24 @@ try:
 except ModuleNotFoundError:
     from Tyradex.tdx_file import TDXFile
 
-with open(pathlib.Path(__file__).parent / 'metadata.json', 'r') as f:
-    _METADATA = json.load(f)
-    VERSION = 'Tyradex for Python version {version} on {os} {os_release} ({os_version})'.format(
-        version=_METADATA['version'],
-        os=platform.system(),
-        os_release=platform.release(),
-        os_version=platform.version(),
-    )
+try:
+    with open(pathlib.Path(__file__).parent / 'metadata.json', 'r') as f:
+        _METADATA = json.load(f)
+        VERSION = 'Tyradex for Python version {version} on {os} {os_release} ({os_version})'.format(
+            version=_METADATA['version'],
+            os=platform.system(),
+            os_release=platform.release(),
+            os_version=platform.version(),
+        )
+except FileNotFoundError:
+    with open(pathlib.Path(__file__).parent.parent / 'metadata.json', 'r') as f:
+        _METADATA = json.load(f)
+        VERSION = 'Tyradex for Python version {version} on {os} {os_release} ({os_version})'.format(
+            version=_METADATA['version'],
+            os=platform.system(),
+            os_release=platform.release(),
+            os_version=platform.version(),
+        )
 
 _CACHE_FOLDER = pathlib.Path(os.path.join(os.path.expanduser("~"), ".TyraDex"))
 if not os.path.exists(_CACHE_FOLDER):

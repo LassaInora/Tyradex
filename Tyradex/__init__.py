@@ -90,7 +90,7 @@ class Pokemon:
         self._stats = abc.StatModel(**(stats if (stats := data.get('stats')) else {}))
         resistances = data.get('resistances')
         self._resistances = [abc.ResistanceModel(**resistance_data) for resistance_data in (resistances if resistances else [])]
-        self._evolutions = abc.EvolutionModel(**(evolutions if (evolutions := data.get('evolutions')) else {}))
+        self._evolutions = abc.EvolutionModel(**(evolutions if (evolutions := data.get('evolution')) else {}))
         self._height = height.split(' ')[0].replace(',', '.') if (height := data.get('height')) else 0.0
         self._weight = weight.split(' ')[0].replace(',', '.') if (weight := data.get('weight')) else 0.0
         self._egg_groups = egg_groups if (egg_groups := data.get('egg_groups')) else []
@@ -464,4 +464,4 @@ class Type:
 
 
 if __name__ == '__main__':
-    Type.all()
+    pass

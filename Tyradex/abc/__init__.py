@@ -360,6 +360,12 @@ class PokemonEvolutionModel:
         self._name = str(data.get('name'))
         self._condition = str(data.get('condition'))
 
+    def __str__(self):
+        return f"{self.name} ({self.condition})"
+
+    def __repr__(self):
+        return self.name
+
     @property
     def pokedex_id(self):
         """ Pokédex ID.
@@ -407,6 +413,12 @@ class MegaEvolutionModel:
         self._name = str(data.get('name'))
         self._orbes = orbes if (orbes := data.get('orbe')) else []
         self._sprites = SimpleSpriteModel(**(sprites if (sprites := data.get('sprites')) else {}))
+
+    def __str__(self):
+        return f"{self.name} ({self.orbes})"
+
+    def __repr__(self):
+        return self.name
 
     @property
     def name(self):
@@ -458,6 +470,18 @@ class EvolutionModel:
         self._next = [PokemonEvolutionModel(**next_) for next_ in (list_next if list_next else [])]
         list_mega = data.get('mega')
         self._mega = [MegaEvolutionModel(**mega) for mega in (list_mega if list_mega else [])]
+
+    def __str__(self):
+        p = ', '.join([str(p) for p in self._pre])
+        n = ', '.join([str(p) for p in self._next])
+        m = ', '.join([str(p) for p in self._mega])
+        return (f"{p}, " if p else "") + "[X]" + (f", {n}" if n else "") + (f", {m}" if m else "")
+
+    def __repr__(self):
+        p = ', '.join([repr(p) for p in self._pre])
+        n = ', '.join([repr(p) for p in self._next])
+        m = ', '.join([repr(p) for p in self._mega])
+        return '[' + (f"{p}, " if p else "") + "[X]" + (f", {n}" if n else "") + (f", {m}" if m else "") + ']'
 
     @property
     def pre(self):
